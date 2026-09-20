@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "launcher"
+version = "0.2.5"
+description = "Orbit Launcher: a GTK-themed desktop launcher and search tool"
+readme = "README.md"
+license = "MIT"
+authors = [{name = "Orbit Launcher Contributors"}]
+requires-python = ">=3.9"
+dependencies = [
+    "PyGObject>=3.42",
+]
+
+[project.scripts]
+launcher = "launcher.app:main"
+orbit = "launcher.app:main"
+
+[tool.setuptools]
+packages = ["launcher", "launcher.data"]
+
+[tool.setuptools.package-data]
+launcher = ["data/*.css"]

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Orbit Launcher
+Comment=Quick application launcher and calculator
+Exec=launcher
+Icon=system-search
+Terminal=false
+NoDisplay=false
+Categories=Utility;
+Keywords=orbit;launcher;search;run;

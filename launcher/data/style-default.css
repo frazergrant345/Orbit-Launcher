@@ -1,0 +1,129 @@
+/*
+ * Default styling for the launcher popup.
+ * This intentionally uses GTK theme colors (@theme_*) so the window
+ * automatically follows whatever GTK theme the user has installed.
+ * Users can override any of this in ~/.config/launcher/style.css
+ */
+
+#launcher-popup {
+    background-color: @theme_bg_color;
+    border-radius: 18px;
+}
+
+#launcher-popup decoration {
+    background-color: transparent;
+    border-radius: 18px;
+    border: 1px solid alpha(@borders, 0.5);
+    box-shadow: 0 18px 46px alpha(black, 0.35);
+}
+
+#launcher-popup scrolledwindow,
+#launcher-popup scrolledwindow > viewport,
+#launcher-popup list {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.launcher-header {
+    padding: 10px 8px 10px 18px;
+}
+
+.launcher-entry,
+.launcher-entry:focus {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    font-size: 19px;
+    padding: 12px 4px;
+    caret-color: @theme_fg_color;
+}
+
+.launcher-entry:not(:focus) {
+    color: alpha(@theme_fg_color, 0.45);
+}
+
+.launcher-settings-button {
+    margin-left: 8px;
+    padding: 6px;
+    border-radius: 999px;
+    opacity: 0.55;
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.launcher-settings-button:hover {
+    opacity: 1;
+    background-color: alpha(@theme_fg_color, 0.08);
+}
+
+.launcher-separator {
+    background-color: alpha(@borders, 0.5);
+    min-height: 1px;
+}
+
+.launcher-body {
+    padding: 8px;
+}
+
+.launcher-results {
+    background-color: transparent;
+}
+
+.launcher-result-row {
+    padding: 8px 10px;
+    border-radius: 10px;
+    margin: 1px 0;
+}
+
+.launcher-result-row:hover {
+    background-color: alpha(@theme_fg_color, 0.06);
+}
+
+.launcher-result-row:selected,
+.launcher-result-row.selected {
+    background-color: alpha(@theme_selected_bg_color, 0.92);
+    color: @theme_selected_fg_color;
+}
+
+.launcher-result-title {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.launcher-result-subtitle {
+    font-size: 11px;
+    opacity: 0.65;
+}
+
+.launcher-empty-state {
+    padding: 28px 12px;
+    opacity: 0.5;
+    font-size: 13px;
+}
+
+.launcher-badge {
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background-color: alpha(@theme_fg_color, 0.1);
+    opacity: 0.75;
+}
+
+.launcher-result-row:selected .launcher-badge,
+.launcher-result-row.selected .launcher-badge {
+    background-color: alpha(@theme_selected_fg_color, 0.2);
+    color: @theme_selected_fg_color;
+}
+
+.launcher-hint-bar {
+    padding: 6px 16px;
+    border-top: 1px solid alpha(@borders, 0.4);
+}
+
+.launcher-hint {
+    font-size: 10px;
+    opacity: 0.5;
+}
