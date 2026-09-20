@@ -2,8 +2,7 @@
 
 A fast, keyboard-driven application launcher and calculator for Linux,
 similar to [Ulauncher](https://ulauncher.io/). Built with GTK3 / PyGObject,
-so it automatically follows your system GTK theme, and it packages cleanly
-as an RPM for Fedora.
+so it automatically follows your system GTK theme.
 
 ## Features
 
